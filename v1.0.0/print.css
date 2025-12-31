@@ -1,0 +1,133 @@
+/* =====================================================
+   GLOBAL VARIABLES
+   ===================================================== */
+:root {
+  --text-main: #222;
+  --text-muted: #666;
+  --heading-color: #1f4fd8;
+  
+  /* Code Block Colors */
+  --code-bg: #f6f8fa;
+  --code-text: #24292f;
+  --code-border: #d0d7de;
+
+  /* Tables */
+  --table-border: #dfe2e5;
+  --table-head-bg: #f6f8fa;
+}
+
+/* =====================================================
+   BASE STYLES
+   ===================================================== */
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.6;
+  color: var(--text-main);
+  /*text-align: justify;*/
+}
+
+/* =====================================================
+   HEADINGS
+   ===================================================== */
+h1, h2, h3, h4 {
+  color: var(--heading-color);
+  font-weight: 600;
+  margin-top: 1.5em;
+  page-break-after: avoid;
+}
+
+h1 { font-size: 20pt; border-bottom: 2px solid var(--heading-color); padding-bottom: 0.3em; }
+h2 { font-size: 16pt; border-bottom: 1px solid #eee; padding-bottom: 0.3em; }
+h3 { font-size: 14pt; }
+
+/* =====================================================
+   CODE BLOCKS & HIGHLIGHTING
+   ===================================================== */
+pre {
+  background: var(--code-bg);
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--code-border);
+  margin-bottom: 16px;
+  
+  /* Preserve formatting and allow page splitting */
+  white-space: pre-wrap; 
+  word-spacing: normal;
+  word-break: normal;
+  tab-size: 4; 
+  break-inside: auto;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 9.5pt;
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+
+/* Syntax Highlighting Colors (Pandoc Pygments) */
+code span.kw { color: #cf222e; font-weight: bold; } /* Keyword */
+code span.dt { color: #0550ae; } /* DataType */
+code span.dv { color: #0550ae; } /* DecVal */
+code span.bn { color: #0550ae; } /* BaseN */
+code span.fl { color: #0550ae; } /* Float */
+code span.ch { color: #0a3069; } /* Char */
+code span.st { color: #0a3069; } /* String */
+code span.co { color: #6e7781; font-style: italic; } /* Comment */
+code span.ot { color: #0550ae; } /* Other */
+code span.al { color: #cf222e; font-weight: bold; } /* Alert */
+code span.fu { color: #8250df; } /* Function */
+code span.er { color: #cf222e; text-decoration: underline; } /* Error */
+
+/* =====================================================
+   TABLES
+   ===================================================== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5em 0;
+  font-size: 0.95em;
+  page-break-inside: auto;
+}
+
+tr { page-break-inside: avoid; }
+
+th, td {
+  border: 1px solid var(--table-border);
+  padding: 8px 12px;
+}
+
+th {
+  background-color: var(--table-head-bg);
+  font-weight: 600;
+  text-align: left;
+}
+
+/* =====================================================
+   TOC (Table of Content)
+   ===================================================== */
+#TOC {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 1.5em 2em;
+  border-radius: 8px;
+  margin-bottom: 2em;
+}
+
+/* This adds the title "Table of Content" */
+#TOC::before {
+  content: "Table of Content";
+  display: block;
+  font-size: 16pt;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 1em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5em;
+}
+
+#TOC > ul { padding-left: 0; list-style: none; }
+#TOC ul li { margin-bottom: 0.5em; }
+#TOC a { text-decoration: none; color: var(--text-main); }
+#TOC a:hover { color: var(--heading-color); text-decoration: underline; }
