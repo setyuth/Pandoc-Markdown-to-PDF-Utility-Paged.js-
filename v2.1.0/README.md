@@ -52,7 +52,6 @@ You can copy-paste this directly as `README.md`.
 
 ---
 
-````md
 # Pandoc PDF Export Utility
 
 **Version:** 2.2.0  
