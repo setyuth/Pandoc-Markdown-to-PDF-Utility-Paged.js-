@@ -6,7 +6,7 @@ REM Pandoc PDF Export v2.1.0
 REM ============================
 
 REM Configuration
-set "VERSION=2.2.0"
+set "VERSION=2.1.0"
 set "DEFAULT_AUTHOR=Mr. SET Yuth"
 set "DEFAULT_THEME=professional"
 
