@@ -1,44 +1,60 @@
 # Pandoc PDF Export Utility
 
-**Version:** 2.2.0  
+**Current Version:** 2.1.0  
 **Author:** Mr. SET Yuth  
 **Platform:** Windows (Batch Script)  
 **PDF Engine:** Paged.js (`pagedjs-cli`)
 
-A professional, theme-based **Markdown → PDF export utility** built on **Pandoc + Paged.js**, designed for **teaching materials, academic documents, and technical manuals** with print-quality layout control.
+A professional, theme-based **Markdown → PDF export utility** built on **Pandoc + Paged.js**, designed for producing **print-quality PDFs** for teaching materials, academic documents, and technical manuals.
 
 ---
 
-## 🚀 What’s New in v2.2.0
+## ✨ Overview
 
-### ✅ Rendering Fixes (Stability Release)
+This utility provides a **simple, repeatable, and styled workflow** for converting Markdown documents into high-quality PDFs using:
 
-This version focuses on **layout correctness and consistency** across all themes.
+- Pandoc for document conversion
+- Paged.js for precise page layout
+- CSS themes for visual consistency
+- Automated headers, footers, and metadata
 
-#### Lists (Fully Fixed)
+It is optimized for **readability, stability, and teaching use cases**.
+
+---
+
+## 🚀 Current Release: v2.1.0
+
+### ✅ Key Features
+
+#### Markdown Rendering
 - Ordered lists (`1. 2. 3.`)
 - Unordered lists (`-`, `*`)
 - GitHub-style task lists (`- [ ]`)
-- Nested lists
-- Correct spacing and line breaks inside list items
-- No collapsed or merged list lines in PDF output
+- Nested lists with correct spacing
+- Stable paragraph and line-break handling
 
-#### Code Blocks (Fully Fixed)
-- Line breaks are preserved exactly as written
+#### Code Blocks
+- Line breaks preserved exactly as written
 - New lines after semicolons (`;`) render correctly
-- No merged or collapsed code lines
+- No collapsed or merged lines
 - Proper wrapping without horizontal overflow
-- Stable pagination with Paged.js
+- Compatible with Paged.js pagination
+
+#### PDF Layout
+- Automatic headers and footers
+- Page numbers and metadata
+- First page header suppressed (cover-page friendly)
+- A4 layout optimized for printing
 
 ---
 
-## 🔧 Technical Improvements
+## 🔧 Technical Details (v2.1.0)
 
-- Enabled `markdown+hard_line_breaks`
-- Preserved original line wrapping using `--wrap=preserve`
-- Unified list rendering logic across **all themes**
-- Deterministic CSS for code blocks compatible with Paged.js
-- No Lua filters required
+- Pandoc input mode: `markdown+hard_line_breaks`
+- Line wrapping preserved using `--wrap=preserve`
+- CSS-based rendering (no Lua filters)
+- Theme-specific styling with consistent structure
+- Deterministic output across all supported themes
 
 ---
 
@@ -49,10 +65,10 @@ pandoc-pdf-utility/
 │
 ├── export_v2.bat              # Main automation script
 ├── header-footer.html         # Paged.js header/footer configuration
-├── README.md                  # Documentation
+├── README.md                  # Project documentation
 │
 └── themes/
     ├── professional.css       # Default professional theme
     ├── academic.css           # Academic / thesis style
-    ├── modern.css             # Modern colorful style
+    ├── modern.css             # Modern UI style
     └── minimal.css            # Minimal clean style
